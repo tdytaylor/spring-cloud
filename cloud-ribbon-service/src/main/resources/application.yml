@@ -1,5 +1,6 @@
 server:
-  port: 8771
+  port: 8781
+
 
 #指定注册中心地址
 eureka:
@@ -10,4 +11,4 @@ eureka:
 #服务的名称
 spring:
   application:
-    name: eureka-client-service
+    name: order-service
