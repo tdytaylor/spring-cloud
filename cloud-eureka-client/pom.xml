@@ -9,9 +9,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>cloud-euraka-client</artifactId>
+  <artifactId>cloud-eureka-client</artifactId>
   <packaging>jar</packaging>
-  <name>cloud-euraka-client</name>
+  <name>cloud-eureka-client</name>
 
   <dependencies>
     <!-- eureka-client 不包含tomcat容器，需要加上web依赖。不然会报如下错误。
