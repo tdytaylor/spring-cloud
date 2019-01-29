@@ -9,13 +9,23 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>cloud-eureka-server</artifactId>
-  <name>cloud-eureka-server</name>
+  <artifactId>cloud-euraka-client</artifactId>
+  <name>cloud-euraka-client</name>
 
   <dependencies>
+    <!-- eureka-client 不包含tomcat容器，需要加上web依赖。不然会报如下错误。
+    Invocation of destroy method failed on bean with name 'scopedTarget.eurekaClient':
+    org.springframework.beans.factory.BeanCreationNotAllowedException:
+    Error creating bean with name 'eurekaInstanceConfigBean':
+    Singleton bean creation not allowed while singletons of this factory are in destruction
+    (Do not request a bean from a BeanFactory in a destroy method implementation!) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -32,5 +42,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
