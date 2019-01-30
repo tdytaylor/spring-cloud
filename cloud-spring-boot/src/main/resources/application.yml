@@ -1,0 +1,9 @@
+spring:
+  devtools:
+    restart:
+      # 热部署不监听的文件
+      exclude: application.yml
+      # 热部署更新触发文件
+      trigger-file: triger.txt
+  application:
+    name: spring-boot
