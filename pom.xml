@@ -8,6 +8,7 @@
     <module>cloud-eureka-client</module>
     <module>cloud-ribbon-service</module>
     <module>cloud-spring-boot</module>
+    <module>cloud-feign-service</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
